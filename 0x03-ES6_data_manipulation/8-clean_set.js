@@ -5,15 +5,15 @@ export default function cleanSet(set, startString) {
         if (element) {
           return element.startsWith(startString);
         }
-        return "";
+        return '';
       })
       .map((element) => {
         if (element) {
-          return element.replace(startString, "");
+          return element.replace(startString, '');
         }
-        return "";
+        return '';
       })
-      .join("-");
+      .join('-');
   }
-  return "";
+  return '';
 }
