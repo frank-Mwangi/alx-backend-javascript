@@ -1,15 +1,8 @@
-const groceriesList = () => {
-  const list = [
-    { key: 'Apples', value: 10 },
-    { key: 'Tomatoes', value: 10 },
-    { key: 'Pasta', value: 1 },
-    { key: 'Rice', value: 1 },
-    { key: 'Banana', value: 5 },
-  ];
-  const newMap = new Map();
-  list.forEach(({ key, value }) => newMap.set(key, value));
-
-  return newMap;
-};
-
+const groceriesList = () => new Map([
+  ['Apples', 10],
+  ['Tomatoes', 10],
+  ['Pasta', 1],
+  ['Rice', 1],
+  ['Banana', 5],
+]);
 export default groceriesList;
