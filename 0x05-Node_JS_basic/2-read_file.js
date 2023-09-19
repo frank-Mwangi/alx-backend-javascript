@@ -28,7 +28,7 @@ const countStudents = (path) => {
     console.log(
       `Number of students in ${key}: ${fields[key].length}. List: ${fields[
         key
-      ].join(', ')}`
+      ].join(', ')}`,
     );
   }
 };
