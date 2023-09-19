@@ -5,8 +5,7 @@ process.stdin.on('readable', () => {
     const name = input.toString();
     process.stdout.write(`Your name is: ${name}`);
   }
-  process.exit();
 });
-process.on('exit', () => {
+process.stdin.on('end', () => {
   process.stdout.write('This important software is now closing\n');
 });
