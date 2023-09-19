@@ -8,14 +8,13 @@ async function countStudents(path) {
         return;
       }
 
-      const response = [];
       const content = data.split('\n');
       let students = content.filter((item) => item);
       students = students.map((item) => item.split(','));
       const totalStudents = students.length ? students.length - 1 : 0;
-      let res = `Number of students: ${totalStudents}`;
-      console.log(res);
-      response.push(res);
+      let response = `Number of students: ${totalStudents}`;
+      // console.log(response);
+      // response.push(response);
       const fields = {};
       for (const i in students) {
         if (i !== 0) {
@@ -26,11 +25,11 @@ async function countStudents(path) {
       }
       delete fields.field;
       for (const key of Object.keys(fields)) {
-        res = `Number of students in ${key}: ${
+        response += `\nNumber of students in ${key}: ${
           fields[key].length
         }. List: ${fields[key].join(', ')}`;
-        console.log(res);
-        response.push(res);
+        // console.log(response);
+        // response.push(response);
       }
       resolve(response);
     });
