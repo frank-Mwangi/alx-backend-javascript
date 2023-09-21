@@ -14,8 +14,20 @@ describe("calculateNumber", () => {
     let result = calculateNumber(1.2, 3.7);
     assert.equal(result, 5);
   });
-  it("Should correctly round two floats befpre summing them", () => {
+  it("Should correctly round two floats before summing them", () => {
     let result = calculateNumber(1.5, 3.7);
     assert.equal(result, 6);
+  });
+  it("Should correctly add two negative integers", () => {
+    assert.equal(calculateNumber(-2, -5), -7);
+  });
+  it("Should correctly sum a negative float and positive integer", () => {
+    assert.equal(calculateNumber(-4.47, 12), 8);
+  });
+  it("Should correctly sum a negative inteer and positive float", () => {
+    assert.equal(calculateNumber(-6, 4.55), -1);
+  });
+  it("Should correctly add two negative floats", () => {
+    assert.equal(calculateNumber(-2.1, -5.2), -7);
   });
 });
